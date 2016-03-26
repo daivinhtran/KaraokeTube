@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Karaokay</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <style>
+
+  </style>
+
+
+</head>
+<!-- Navbar goes here -->
+<body class="blue lighten-3">
+<!--
+<div class="navbar-fixed">
+    <nav class="blue">
+      <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">&nbsp;Karaokay</a>
+      </div>
+    </nav>
+</div>
+-->
+
+
+
+    <!-- Page Layout here -->
+<!--
+    <div class="row">
+      
+      <div class="col s3 blue lighten-4">
+         Searchbar goes here 
+
+        <div class="center" class="brand-logo">
+            <img id="logo" width="100px" class="center" height="100%px" src="font/material-design-icons/cloud-music.svg" alt="Kiwi standing on oval">
+        </div>
+        <nav class="orange lighten-2 flat">
+            <div class="nav-wrapper">
+                <form>
+                    <div class="input-field">
+                        <input id="search" type="search" required="">
+                        <label for="search"><i class="mdi-action-search"></i></label>
+                        <i class="mdi-navigation-close"></i>
+                    </div>
+                </form>
+            </div>
+        </nav>
+          <div id="results" class="row">
+          </div>
+      </div>
+      
+        <div id="player" class="col s7">
+          <div class="video-container">
+
+        </div>
+
+
+      </div>
+      <div id="playlist" class="col s2 green lightnen-4">
+      </div>
+
+    </div>
+-->
+  <header>
+    <ul id="results" class="side-nav fixed" style="width: 360px;">
+      <li><nav class="orange lighten-2">
+              <div class="nav-wrapper">
+                  <form>
+                      <div class="input-field">
+                          <input id="search" type="search" required="">
+                          <label for="search"><i class="mdi-action-search"></i></label>
+                          <i class="mdi-navigation-close"></i>
+                      </div>
+                  </form>
+              </div>
+          </nav></li>
+    </ul>
+  </header>
+  <main>
+    <div class="section">
+    </div>
+
+      <div class="row">
+        <div id="player" class="col s9">
+          <div class="video-container"></div>
+          
+        </div>
+        <div id="playlist" class="col s3 green">
+        </div>
+      </div>
+    
+  </main>  
+          
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+<!--  <script src="js/init.js"></script>-->
+  <script src="js/app.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=init"></script>
+
+
+
+  </body>
+</html>
