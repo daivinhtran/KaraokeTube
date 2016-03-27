@@ -42,6 +42,7 @@ function getVideo() {
        resetVideoHeight();
     });
     $(window).on("resize", resetVideoHeight);
+Materialize.showStaggeredList('#results');
 }
 
 
@@ -52,6 +53,14 @@ function insertList(id,title) {
   var videoid = id;
 
   var songDiv = '<div id="' + id + 'song"' + ' class="waves-effect card-panel col s12 hoverable"><h6>' + beautify(title) + '</h6></div>';
+  
+//  
+//  var songDiv = '<div class="card blue-grey darken-1"><div id="' + id + 'song" class="card-content white-text">' + beautify(title) +
+//            '</div><div class="card-action"><i class="material-icons">close</i></div></div>';
+//  
+  
+  
+  
   var songDivID = "#" + id + "song";
   
   $("#playlist").append(songDiv);
@@ -96,10 +105,7 @@ function beautify(s) {
     return s;
 }
 
-
-
-
-
+      
 
 
 

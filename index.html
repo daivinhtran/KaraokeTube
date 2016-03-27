@@ -15,7 +15,6 @@
 	<script src="js/audiodisplay.js"></script>
   <script src="js/recorderjs/recorder.js"></script>
     <script src="js/canvas.js"></script>
-  <script src="http://www.youtube.com/player_api"></script>
 </head>
 <!-- Navbar goes here -->
 <body class="white-text grey darken-4">
@@ -41,25 +40,21 @@
       <div class="row">
         <div id="player" class="col s9">
           <div class="video-container"></div>
-          
         </div>
         <div id="playlist" class="col s3 green black-text">
         </div>
       </div>
       <div class="row">
-        <div id="viz" class="col s9 center">
+        
+        <div class="col s7 offset-s1 center">
           <canvas id="analyser" width="400" height="100"></canvas>
-          <canvas style="display:none;" id="wavedisplay" width="200" height="500"></canvas>
+          <canvas style="display:none;" id="wavedisplay" width="0" height="0"></canvas>
         </div>
-        <div id="controls" class="col s3">
-          <img id="record" src="img/mic128.png" onclick="toggleRecording(this);">
-          <a id="save" href="#"><img src="img/save.svg"></a>
+        <div id="controls" class="col s1">
+          <img id="record" height="40" src="img/mic128.png" onclick="toggleRecording(this);">
+          <a id="save" href="#"><img height="40" src="img/save.svg"></a>
 	     </div>
       </div>
-    <div class="row">
-    <div id="player"></div>
-
-    </div>
     
   </main>
         <footer class="page-footer" style="padding-top: 0px">
