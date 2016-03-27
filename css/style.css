@@ -1,8 +1,25 @@
 
 header, main, footer {
-    padding-left: 360px;
+    padding-left: 320px;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block;
 }
+
+
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+#title {
+  font-family: 'Rock Salt', cursive;
+}
+

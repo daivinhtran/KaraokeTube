@@ -9,14 +9,13 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" rel="stylesheet"/>
-  <style>
 
-  </style>
+<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
 
 
 </head>
 <!-- Navbar goes here -->
-<body class="blue lighten-3">
+<body class="white-text grey darken-4">
 <!--
 <div class="navbar-fixed">
     <nav class="blue">
@@ -67,12 +66,12 @@
     </div>
 -->
   <header>
-    <ul id="results" class="side-nav fixed" style="width: 360px;">
+    <ul id="results" class="side-nav fixed blue darken-3" style="width: 320px;">
       <li><nav class="orange lighten-2">
               <div class="nav-wrapper">
                   <form>
                       <div class="input-field">
-                          <input id="search" type="search" required="">
+                          <input id="search" type="search">
                           <label for="search"><i class="mdi-action-search"></i></label>
                           <i class="mdi-navigation-close"></i>
                       </div>
@@ -82,19 +81,28 @@
     </ul>
   </header>
   <main>
-    <div class="section">
-    </div>
-
+      <div class="row">
+        <div class="col s9 center" id="title"><h3>Kara-okay</h3></div>
+      </div>
       <div class="row">
         <div id="player" class="col s9">
           <div class="video-container"></div>
           
         </div>
-        <div id="playlist" class="col s3 green">
+        <div id="playlist" class="col s3 green black-text">
         </div>
       </div>
     
-  </main>  
+  </main>
+        <footer class="page-footer" style="padding-top: 0px">
+          <div class="footer-copyright">
+              <div class="row">
+                <div class="center col s9">
+                  © Made by VNBuzz with &hearts;
+                </div>
+              </div>
+          </div>
+        </footer>
           
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
