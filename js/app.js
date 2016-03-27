@@ -51,7 +51,7 @@ function getVideo() {
     // execute the request
     request.execute(function(response) {
        var results = response.result;
-       $("#results").find('li:not(:first):not(:last)').remove();
+       $("#results").find('li:not(:first)).remove();
        $.each(results.items, function(index, item) {
          $.get("tpl/item.html", function(data) {
              $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId, "pic":item.snippet.thumbnails.high.url}]));
