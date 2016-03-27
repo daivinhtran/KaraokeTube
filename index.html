@@ -12,61 +12,14 @@
 
 <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
 
-
+	<script src="js/audiodisplay.js"></script>
+  <script src="js/recorderjs/recorder.js"></script>
+    <script src="js/canvas.js"></script>
 </head>
 <!-- Navbar goes here -->
 <body class="white-text grey darken-4">
-<!--
-<div class="navbar-fixed">
-    <nav class="blue">
-      <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">&nbsp;Karaokay</a>
-      </div>
-    </nav>
-</div>
--->
-
-
-
-    <!-- Page Layout here -->
-<!--
-    <div class="row">
-      
-      <div class="col s3 blue lighten-4">
-         Searchbar goes here 
-
-        <div class="center" class="brand-logo">
-            <img id="logo" width="100px" class="center" height="100%px" src="font/material-design-icons/cloud-music.svg" alt="Kiwi standing on oval">
-        </div>
-        <nav class="orange lighten-2 flat">
-            <div class="nav-wrapper">
-                <form>
-                    <div class="input-field">
-                        <input id="search" type="search" required="">
-                        <label for="search"><i class="mdi-action-search"></i></label>
-                        <i class="mdi-navigation-close"></i>
-                    </div>
-                </form>
-            </div>
-        </nav>
-          <div id="results" class="row">
-          </div>
-      </div>
-      
-        <div id="player" class="col s7">
-          <div class="video-container">
-
-        </div>
-
-
-      </div>
-      <div id="playlist" class="col s2 green lightnen-4">
-      </div>
-
-    </div>
--->
   <header>
-    <ul id="results" class="side-nav fixed blue darken-3" style="width: 320px;">
+    <ul id="results" class="side-nav fixed blue darken-3" style="width: 250px;">
       <li><nav class="orange lighten-2">
               <div class="nav-wrapper">
                   <form>
@@ -90,6 +43,17 @@
           
         </div>
         <div id="playlist" class="col s3 green black-text">
+        </div>
+      </div>
+      <div class="row">
+        <div id="viz" class="col s2 center">
+          <canvas id="analyser" width="400" height="100"></canvas>
+        </div>
+        <div id="controls" class="col s3">
+          <img id="record" src="img/mic128.png" onclick="toggleRecording(this);">
+          <a id="save" href="#"><img src="img/save.svg"></a>
+	     </div>
+        <div  class="col s3 center">
         </div>
       </div>
     

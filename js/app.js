@@ -54,20 +54,14 @@ function getVideo() {
        $("#results").find('li:not(:first)').remove();
        $.each(results.items, function(index, item) {
          $.get("tpl/item.html", function(data) {
-             $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId, "pic":item.snippet.thumbnails.high.url}]));
+              var newtitle = beautify(item.snippet.title);
+             $("#results").append(tplawesome(data, [{"title":newtitle, "videoid":item.id.videoId, "pic":item.snippet.thumbnails.high.url}]));
          });
        });
        resetVideoHeight();
     });
     $(window).on("resize", resetVideoHeight);
 }
-
-
-
-
-
-
-
 
 
 
@@ -96,11 +90,9 @@ function play(id) {
   $(songDiv).remove();
 }
 
-
-
 function beautify(s) {
     s = s.toLowerCase();
-    var arr = ['<', '>', '/', '\\', '~', '|', '+', '-', '=', '^', '[', ']', '{', '}', '(', ')', '*', '?', '.', '@', '!', '#', '%', '&', ' karaoke', 'karaoke '];
+    var arr = ['<', '>', '/', '\\', '~', '|', '+', '-', '=', '^', '[', ']', '{', '}', '(', ')', '*', '?', '.', '@', '!', '#', '%', '&', ' karaoke', 'karaoke ','\"', '"', '\'', "'"];
     for (var i = 0; i < arr.length; i++) {
         s = s.replace(arr[i], '');
     }
@@ -115,5 +107,5 @@ function beautify(s) {
             r += s[i];
         }
     }
-    return r;
+    return s;
 }
