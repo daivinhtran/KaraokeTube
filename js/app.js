@@ -40,7 +40,7 @@ function init() {
            part: "snippet",
            type: "video",
            q: $("#search").val().replace(" ", "+") + "+karaoke",
-           maxResults: 5,
+           maxResults: 10,
            order: "relevance",
       });
       // execute the request
@@ -74,7 +74,7 @@ function insertList(id,title) {
 
 function play(id) {
   $("#player").children().remove();
-  var element = '<div class="video-container"><iframe width="853" height="700" src="//www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe></div>';
+  var element = '<div class="video-container"><iframe width="853" height="700" src="//www.youtube.com/embed/' + id + '?autoplay=1" frameborder="0" allowfullscreen></iframe></div>';
     console.log(element);
 
   $("#player").append(element);
