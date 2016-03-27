@@ -4,25 +4,6 @@ function tplawesome(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{
 $(function() {
     $("form").on("submit", function(e) {
        e.preventDefault();
-       // prepare the request
-//       var request = gapi.client.youtube.search.list({
-//            part: "snippet",
-//            type: "video",
-//            q: $("#search").val().replace(" ", "+") + "+karaoke",
-//            maxResults: 5,
-//            order: "relevance",
-//       });
-//       // execute the request
-//       request.execute(function(response) {
-//          var results = response.result;
-//          $("#results").find('li:not(:first)').remove();
-//          $.each(results.items, function(index, item) {
-//            $.get("tpl/item.html", function(data) {
-//                $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId, "pic":item.snippet.thumbnails.high.url}]));
-//            });
-//          });
-//          resetVideoHeight();
-//       });
         getVideo();
     });
 
@@ -81,10 +62,15 @@ function insertList(id,title) {
 
 function play(id) {
   $("#player").children().remove();
-  var element = '<div class="video-container"><iframe width="853" height="700" src="//www.youtube.com/embed/' + id + '?autoplay=1" frameborder="0" allowfullscreen></iframe></div>';
-    console.log(element);
+  
+  
+  var element = '<div class="video-container"><iframe id="YTplayer" width="853" height="700" src="//www.youtube.com/embed/' + id + '?autoplay=1" frameborder="0" allowfullscreen></iframe></div>';
+
 
   $("#player").append(element);
+
+  
+
     var songDiv = "#" + id + 'song';
   console.log(songDiv);
   $(songDiv).remove();
@@ -109,3 +95,18 @@ function beautify(s) {
     }
     return s;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
